@@ -1,5 +1,5 @@
 BaseController = require 'zooniverse/controllers/base-controller'
-# $ = window.jQuery
+$ = window.jQuery
 class Classifier extends BaseController
   className: 'classify'
   template: require '../views/classifier'

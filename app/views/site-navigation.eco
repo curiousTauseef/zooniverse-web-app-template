@@ -26,16 +26,14 @@
 </div>
 
 <div class="for-home-page">
-  <div class="asteroid-bg">
-    <div class="content-block">
-      <%- translate 'h1', 'home.header.title' %>
-      <%- translate 'p', 'home.header.content' %>
+  <div class="content-block">
+    <%- translate 'h1', 'home.header.title' %>
+    <%- translate 'p', 'home.header.content' %>
 
-      <p class="action">
-        <%- translate 'a.call-to-action', 'home.header.start', href: '#/classify' %>
-        <%- translate 'a.learn-more', 'home.header.learnMore', href: '#/' %>
-      </p>
-    </div>
+    <p class="action">
+      <%- translate 'a.call-to-action', 'home.header.start', href: '#/classify' %>
+      <%- translate 'a.learn-more', 'home.header.learnMore', href: '#/' %>
+    </p>
   </div>
 </div>
 
