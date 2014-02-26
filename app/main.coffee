@@ -42,6 +42,7 @@ topBar.el.appendTo document.body
 browserDialog = require 'zooniverse/controllers/browser-dialog'
 browserDialog.check msie: 9
 
+# get user
 User = require 'zooniverse/models/user'
 u = User.fetch()
 
@@ -53,5 +54,6 @@ footer = new Footer
 document.body.appendChild footerContainer
 footer.el.appendTo footerContainer
 
-window.app = {api, stack, topBar}
+# bind app to window
+window.app = {api, siteNavigation, stack, topBar}
 module.exports = window.app
