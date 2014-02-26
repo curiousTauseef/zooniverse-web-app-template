@@ -17,9 +17,9 @@ stack = new StackOfPages
 document.body.appendChild stack.el
 
 # top bar
-# TopBar = require 'zooniverse/controllers/top-bar'
-# topBar = new TopBar
-# topBar.el.appendTo document.body
+TopBar = require 'zooniverse/controllers/top-bar'
+topBar = new TopBar
+topBar.el.appendTo document.body
 
 browserDialog = require 'zooniverse/controllers/browser-dialog'
 browserDialog.check msie: 9
@@ -36,5 +36,5 @@ document.body.appendChild footerContainer
 footer.el.appendTo footerContainer
 
 # window.app = {api, siteNavigation, stack, topBar}
-window.app = {api, stack}
+window.app = {api, stack, topBar}
 module.exports = window.app
