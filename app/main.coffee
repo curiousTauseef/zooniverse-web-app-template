@@ -1,10 +1,6 @@
 $ = window.jQuery
 $.noConflict()
 
-# api
-Api = require 'zooniverse/lib/api'
-api = new Api project: 'asteroid'
-
 # language manager
 t7e = require 't7e'
 enUs = require './lib/en-us'
@@ -17,6 +13,10 @@ languageManager = new LanguageManager
 languageManager.on 'change-language', (e, code, strings) ->
   t7e.load strings
   t7e.refresh()
+
+# api
+Api = require 'zooniverse/lib/api'
+api = new Api project: 'asteroid'
 
 # site navigation
 SiteNavigation = require './controllers/site-navigation'
