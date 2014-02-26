@@ -5,6 +5,11 @@ $.noConflict()
 Api = require 'zooniverse/lib/api'
 api = new Api project: 'asteroid'
 
+# site navigation
+SiteNavigation = require './controllers/site-navigation'
+siteNavigation = new SiteNavigation
+siteNavigation.el.appendTo document.body
+
 # router
 StackOfPages = require 'stack-of-pages/src/stack-of-pages'
 stack = new StackOfPages
@@ -35,6 +40,5 @@ footer = new Footer
 document.body.appendChild footerContainer
 footer.el.appendTo footerContainer
 
-# window.app = {api, siteNavigation, stack, topBar}
 window.app = {api, stack, topBar}
 module.exports = window.app
