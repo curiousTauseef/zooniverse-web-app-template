@@ -4,9 +4,9 @@
   "dependencies": {
     "haw": "~0.2.4",
     "publisssh": "~0.2.1",
-    "stack-of-pages": "~0.0.6",
+    "stack-of-pages": "0.0.11",
     "t7e": "~0.2.3",
-    "zooniverse": "~0.2.0"
+    "zooniverse": "~0.2.3"
   },
   "scripts": {
     "start": "haw serve --port 3416",

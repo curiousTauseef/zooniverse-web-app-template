@@ -5,6 +5,19 @@ $.noConflict()
 Api = require 'zooniverse/lib/api'
 api = new Api project: 'asteroid'
 
+# language manager
+t7e = require 't7e'
+enUs = require './lib/en-us'
+t7e.load enUs
+LanguageManager = require 'zooniverse/lib/language-manager'
+languageManager = new LanguageManager
+  translations:
+    en: label: 'English', strings: enUs
+    # es: label: 'Español', strings: './dev-translations/es.json'
+languageManager.on 'change-language', (e, code, strings) ->
+  t7e.load strings
+  t7e.refresh()
+
 # site navigation
 SiteNavigation = require './controllers/site-navigation'
 siteNavigation = new SiteNavigation
